@@ -19,7 +19,7 @@
     - { name: "payment" }
     - { name: "frontend" }
 
-- name: include multi branch task file
+- name: include single branch task file
   ansible.builtin.include_tasks: sbranch.yml
   loop:
-    - { name: "infra-create" }
+    - { name: "infra-create", repo: "roboshop-mutable-infra" }
